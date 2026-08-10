@@ -8,5 +8,7 @@ Public URLs after deployment:
 - `https://nirvanasolutions.in/barcode-scanner/support/`
 - `https://nirvanasolutions.in/gst-calci/privacy/`
 - `https://nirvanasolutions.in/gst-calci/support/`
+- `https://nirvanasolutions.in/anydigit-calculator/privacy/`
+- `https://nirvanasolutions.in/anydigit-calculator/support/`
 
 The root `CNAME` file preserves the custom-domain configuration.
