@@ -1,0 +1,29 @@
+.brand {
+  display: block;
+  width: 190px;
+  height: 62px;
+  background: url("/assets/nirvana-solutions-logo.png") left center / contain no-repeat;
+  font-size: 0;
+}
+
+.brand > .brand-mark,
+.brand > span:not(.brand-mark) {
+  display: none;
+}
+
+.site-footer .brand {
+  width: 230px;
+  height: 75px;
+}
+
+@media (max-width: 620px) {
+  .brand {
+    width: 165px;
+    height: 54px;
+  }
+
+  .site-footer .brand {
+    width: 210px;
+    height: 68px;
+  }
+}
