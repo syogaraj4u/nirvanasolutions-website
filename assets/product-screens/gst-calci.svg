@@ -1,0 +1,32 @@
+<svg width="360" height="780" viewBox="0 0 360 780" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="360" height="780" rx="28" fill="#0f2f4a"/>
+  <rect x="18" y="18" width="324" height="744" rx="24" fill="#f8fafb"/>
+  <rect x="18" y="18" width="324" height="44" rx="24 24 0 0" fill="#102b45"/>
+  <text x="48" y="50" fill="#ffffff" font-family="Inter, Arial" font-size="14" font-weight="700">GST Calci</text>
+  <text x="260" y="50" fill="#9fd4ff" font-family="Inter, Arial" font-size="11">GST Calculator</text>
+
+  <rect x="34" y="82" width="292" height="130" rx="20" fill="#16352b" />
+  <rect x="56" y="104" width="248" height="46" rx="16" fill="#ecf8f2"/>
+  <text x="70" y="132" fill="#122435" font-family="Inter, Arial" font-size="26" font-weight="700">₹ 1,18,000</text>
+  <rect x="44" y="168" width="272" height="36" fill="#ecf8f2" />
+  <line x1="44" y1="204" x2="316" y2="204" stroke="#d6dde2" stroke-width="1"/>
+  <text x="56" y="190" fill="#61717c" font-family="Inter, Arial" font-size="12">Taxable value</text>
+  <text x="250" y="190" fill="#2a3e4a" font-family="Inter, Arial" font-size="12">₹ 1,00,000</text>
+  <text x="56" y="228" fill="#61717c" font-family="Inter, Arial" font-size="12">GST 18%</text>
+  <text x="250" y="228" fill="#2a3e4a" font-family="Inter, Arial" font-size="12">₹ 18,000</text>
+
+  <rect x="48" y="238" width="264" height="48" rx="14" fill="#f7f2ff"/>
+  <rect x="48" y="304" width="264" height="48" rx="14" fill="#f7f2ff"/>
+  <rect x="48" y="370" width="264" height="48" rx="14" fill="#f7f2ff"/>
+  <rect x="48" y="436" width="264" height="48" rx="14" fill="#f7f2ff"/>
+  <rect x="48" y="502" width="264" height="48" rx="14" fill="#f7f2ff"/>
+
+  <g fill="#1c2f42" font-size="12" font-family="Inter, Arial">
+    <text x="56" y="330">History</text>
+    <text x="56" y="396">History: 18% • ₹ 1,18,000</text>
+    <text x="56" y="462">Convert &amp; Export CSV</text>
+    <text x="56" y="528">Share result</text>
+  </g>
+
+  <text x="76" y="748" fill="#2d4655" font-family="Inter, Arial" font-size="13">Live GST breakdown • Local data • Private by design</text>
+</svg>
