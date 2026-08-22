@@ -55,3 +55,9 @@
 :where(a,button,input,select,textarea,summary):focus-visible{outline:3px solid var(--mint);outline-offset:4px}
 
 @media (max-width:620px){.brand{width:164px;height:54px}.site-footer .brand{width:210px;height:68px}}
+
+/* Genuine product screenshots */
+.product-detail-visual.product-gst{background:#e3e2f2}
+.product-detail-visual.product-scan{background:#02091a}
+.product-detail-visual.product-calc{background:#e6e3ff}
+.product-detail-visual img.real-product-shot{width:auto;height:min(410px,70vw);max-width:100%;max-height:410px;border-radius:16px;object-fit:contain;box-shadow:0 24px 48px #0000003d}

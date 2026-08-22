@@ -518,6 +518,13 @@
     linear-gradient(145deg, #f8fdff, #dcedf5);
 }
 
+.work-browser-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: top;
+}
+
 .work-browser-body > p {
   margin: 0;
   color: #1b628d;
@@ -595,19 +602,19 @@
 }
 
 .work-card-gst {
-  background: #16352b;
+  background: #e3e2f2;
 }
 .work-card-scan {
-  background: #f3b84b;
+  background: #02091a;
 }
 .work-card-calc {
-  background: #392973;
+  background: #e6e3ff;
 }
 
 .work-card-media img {
   width: min(65%, 205px);
-  max-height: 290px;
-  object-fit: contain;
+  height: auto;
+  max-height: none;
   transform: translateY(36px);
   filter: drop-shadow(0 20px 30px #00000045);
   transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -659,6 +666,42 @@
 .product-card:hover .product-screen {
   transform: scale(1.012);
   box-shadow: 0 20px 36px #07142120;
+}
+
+.product-gst .product-screen {
+  background: #e3e2f2;
+}
+
+.product-scan .product-screen {
+  background: #02091a;
+}
+
+.product-calc .product-screen {
+  background: #e6e3ff;
+}
+
+.product-pdf .product-screen {
+  background: #e9efff;
+}
+
+.product-screen > .real-product-shot {
+  width: min(62%, 250px);
+  height: auto;
+  max-width: calc(100% - 48px);
+  border-radius: 17px 17px 0 0;
+  object-fit: contain;
+  object-position: top;
+  transform: translateY(30px);
+  box-shadow: 0 22px 46px #07142145;
+}
+
+.product-screen > .real-product-shot-web {
+  width: calc(100% - 44px);
+  height: 265px;
+  max-width: none;
+  border-radius: 12px 12px 0 0;
+  object-fit: cover;
+  object-position: top;
 }
 
 .enquiry-section {
