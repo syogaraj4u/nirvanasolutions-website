@@ -45,3 +45,13 @@
   .reveal{opacity:1;transform:none}
   .reveal.is-visible{animation:none}
 }
+
+/* Consistent brand and keyboard-accessibility layer */
+.brand{display:block;flex:0 0 auto;width:196px;height:64px;background:url("../../../assets/nirvana-solutions-logo.png") left center/contain no-repeat;font-size:0;line-height:0}
+.brand>.brand-mark,.brand>span:not(.brand-mark){display:none}
+.site-footer .brand{width:226px;height:74px}
+.nav-wrap{gap:30px}
+.primary-nav{gap:26px}
+:where(a,button,input,select,textarea,summary):focus-visible{outline:3px solid var(--mint);outline-offset:4px}
+
+@media (max-width:620px){.brand{width:164px;height:54px}.site-footer .brand{width:210px;height:68px}}
