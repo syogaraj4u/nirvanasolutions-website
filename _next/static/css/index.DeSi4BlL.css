@@ -60,4 +60,24 @@
 .product-detail-visual.product-gst{background:#e3e2f2}
 .product-detail-visual.product-scan{background:#02091a}
 .product-detail-visual.product-calc{background:#e6e3ff}
+.product-detail-visual.product-screenmint{background:#050505}
 .product-detail-visual img.real-product-shot{width:auto;height:min(410px,70vw);max-width:100%;max-height:410px;border-radius:16px;object-fit:contain;box-shadow:0 24px 48px #0000003d}
+
+/* Product screenshot galleries */
+.product-screenshot-section{padding:92px 0 104px;background:linear-gradient(180deg,#f5f1e9,#f1f4f8)}
+.product-screenshot-heading{display:grid;grid-template-columns:minmax(0,.65fr) minmax(0,1.35fr);gap:60px;align-items:end;margin-bottom:44px}
+.product-screenshot-heading .eyebrow{align-self:start;margin-top:12px}
+.product-screenshot-heading h2{max-width:760px;margin:0;font-size:clamp(38px,5vw,62px);line-height:1.04}
+.product-screenshot-heading h2 em{color:var(--coral);font-family:var(--font-serif),Georgia,serif;font-weight:500}
+.product-screenshot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.product-screenshot-grid figure{margin:0;padding:22px 22px 0;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 22px 46px #0a182414}
+.product-screenshot-grid img{width:auto;height:440px;max-width:100%;margin:0 auto;border-radius:15px 15px 0 0;object-fit:contain;box-shadow:0 22px 42px #0714212e}
+.product-screenshot-grid figcaption{min-height:70px;padding:18px 2px;color:#53636e;font-size:12px;font-weight:750;line-height:1.5}
+.product-screenshot-scan figure{background:#061024;border-color:#174067}
+.product-screenshot-scan figcaption{color:#c8d7e3}
+.product-screenshot-calc figure,.product-screenshot-gst figure{background:#f8f7ff}
+.product-screenshot-screenmint figure{background:#080808;border-color:#302125}
+.product-screenshot-screenmint figcaption{color:#e6cdd2}
+
+@media (max-width:760px){.product-screenshot-heading{grid-template-columns:1fr;gap:10px}.product-screenshot-heading .eyebrow{margin-top:0}}
+@media (max-width:620px){.product-screenshot-section{padding:70px 0 80px}.product-screenshot-grid{display:flex;gap:14px;margin-right:-15px;padding:0 15px 14px 0;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin}.product-screenshot-grid figure{flex:0 0 min(78vw,310px);scroll-snap-align:start}.product-screenshot-grid img{height:390px}}
