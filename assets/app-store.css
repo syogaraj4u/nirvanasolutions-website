@@ -102,6 +102,97 @@
   margin-top: 24px;
 }
 
+.app-download-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.app-download-group-hero {
+  margin-top: 24px;
+}
+
+.app-download-group-hero .app-store-hero {
+  margin-top: 0;
+}
+
+.app-download-qr {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 76px;
+  padding: 9px 14px 9px 9px;
+  color: #fff;
+  background: #ffffff0f;
+  border: 1px solid #8de3c74a;
+  border-radius: 13px;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.app-download-qr:hover {
+  color: #fff;
+  background: #ffffff17;
+  border-color: #8de3c7;
+  transform: translateY(-2px);
+}
+
+.app-download-qr:focus-visible,
+.app-store-portfolio-link:focus-visible {
+  outline: 3px solid #2aa7c8;
+  outline-offset: 3px;
+}
+
+.app-download-qr img {
+  width: 58px;
+  height: 58px;
+  padding: 4px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.app-download-qr span {
+  display: grid;
+  gap: 5px;
+  line-height: 1.1;
+}
+
+.app-download-qr small {
+  color: #aebdc7;
+  font-size: 10px;
+}
+
+.app-download-qr strong {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.app-store-portfolio-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 16px;
+  color: #071a2d;
+  border-bottom: 1px solid #071a2d4d;
+  padding-bottom: 4px;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.2;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.app-store-portfolio-link:hover {
+  color: #e85d4a;
+  border-color: #e85d4a;
+}
+
 .product-state.product-state-live {
   color: #0b5a46;
   background: #e6f8f1;
@@ -109,6 +200,14 @@
 }
 
 @media (max-width: 620px) {
+  .app-download-group {
+    display: block;
+  }
+
+  .app-download-qr {
+    display: none;
+  }
+
   .app-store-cta:not(.app-store-cta-compact) {
     justify-content: flex-start;
     width: 100%;
@@ -146,7 +245,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .app-store-cta {
+  .app-store-cta,
+  .app-download-qr,
+  .app-store-portfolio-link {
     transition: none;
   }
 }
