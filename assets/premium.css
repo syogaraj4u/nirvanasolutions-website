@@ -1172,6 +1172,19 @@
 
 .faq-list details {
   border-bottom: 1px solid var(--line);
+  padding: 0 14px;
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.faq-list details:hover {
+  background: #ffffff70;
+}
+
+.faq-list details[open] {
+  background: #ffffffa3;
+  box-shadow: inset 3px 0 0 var(--coral);
 }
 
 .faq-list summary {
@@ -1191,6 +1204,12 @@
 
 .faq-list summary::-webkit-details-marker {
   display: none;
+}
+
+.faq-list summary:focus-visible {
+  outline: 3px solid #2aa7c8;
+  outline-offset: 3px;
+  border-radius: 6px;
 }
 
 .faq-list summary span {
@@ -1433,6 +1452,10 @@
 }
 
 @media (max-width: 620px) {
+  .faq-list details {
+    padding: 0 10px;
+  }
+
   .faq-list summary {
     min-height: 78px;
     gap: 15px;
@@ -1484,5 +1507,12 @@
 
   .to-top {
     bottom: 82px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-list details,
+  .faq-list summary span {
+    transition: none;
   }
 }
