@@ -46,6 +46,18 @@
       mobileMenu.open = false;
     });
   });
+  if (mobileMenu) {
+    document.addEventListener("pointerdown", (event) => {
+      if (!mobileMenu.contains(event.target)) mobileMenu.open = false;
+    });
+    mobileMenu.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && mobileMenu.open) {
+        mobileMenu.open = false;
+        mobileMenu.querySelector("summary")?.focus();
+        event.preventDefault();
+      }
+    });
+  }
 
   const addRevealAnimations = () => {
     const revealNodes = [...document.querySelectorAll(".reveal")];
@@ -73,6 +85,7 @@
     const button = document.createElement("button");
     button.type = "button";
     button.className = "to-top";
+    button.hidden = true;
     button.setAttribute("aria-label", "Back to top");
     button.textContent = "↑";
     button.addEventListener("click", () => {
@@ -178,9 +191,10 @@
       const mode = button.dataset.heroMode;
       const content = modeContent[mode];
       if (!content) return;
-      buttons.forEach((item) =>
-        item.setAttribute("aria-selected", String(item === button)),
-      );
+      buttons.forEach((item) => {
+        item.setAttribute("aria-selected", String(item === button));
+        item.tabIndex = item === button ? 0 : -1;
+      });
       panel.className = `hero-mode-panel mode-${mode}`;
       panel.setAttribute("aria-labelledby", button.id);
       kicker.textContent = content.kicker;
@@ -196,6 +210,7 @@
       if (focus) button.focus();
     };
 
+    selectMode(buttons.find((button) => button.getAttribute("aria-selected") === "true") || buttons[0]);
     buttons.forEach((button, index) => {
       button.addEventListener("click", () => selectMode(button));
       button.addEventListener("keydown", (event) => {
@@ -284,12 +299,7 @@
       const whatsappUrl = `https://wa.me/918686839018?text=${encodeURIComponent(message)}`;
       status.textContent =
         "Opening WhatsApp with your enquiry ready for review…";
-      const conversation = window.open(
-        whatsappUrl,
-        "_blank",
-        "noopener,noreferrer",
-      );
-      if (!conversation) window.location.assign(whatsappUrl);
+      window.location.assign(whatsappUrl);
     });
   };
 
@@ -548,6 +558,7 @@
     progressBar.style.width = `${Math.max(0, Math.min(100, (window.scrollY / total) * 100))}%`;
     header.classList.toggle("is-scrolled", window.scrollY > 8);
     toTop.classList.toggle("is-visible", window.scrollY > 620);
+    toTop.hidden = window.scrollY <= 620;
 
     if (!isHomePage) {
       setActive(pageTarget, "page");

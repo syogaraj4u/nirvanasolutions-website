@@ -16,12 +16,12 @@
     <link
       rel="icon"
       type="image/png"
-      sizes="1254x1254"
-      href="https://nirvanasolutions.in/assets/favicon.png"
+      sizes="48x48"
+      href="https://nirvanasolutions.in/assets/favicon-48.png"
     />
     <link
       rel="apple-touch-icon"
-      href="https://nirvanasolutions.in/assets/favicon.png"
+      href="https://nirvanasolutions.in/assets/apple-touch-icon.png"
     />
     <link
       rel="sitemap"
@@ -684,9 +684,18 @@
               >
             </p>
           </div>
-          <div class="product-grid">
+          <div class="product-filter-bar" data-product-filters hidden>
+            <div class="product-filter-buttons" role="group" aria-label="Browse products by platform">
+              <button type="button" data-product-filter="all" aria-pressed="true" aria-controls="product-list">All products</button>
+              <button type="button" data-product-filter="ios" aria-pressed="false" aria-controls="product-list">Apple apps</button>
+              <button type="button" data-product-filter="web" aria-pressed="false" aria-controls="product-list">Web tools</button>
+            </div>
+            <p role="status" aria-live="polite" aria-atomic="true">5 products shown</p>
+          </div>
+          <div class="product-grid" id="product-list">
             <article
               class="product-card product-gst reveal product-card-1"
+              data-platform="ios"
               data-glow
             >
               <div class="product-card-content">
@@ -756,6 +765,7 @@
             </article>
             <article
               class="product-card product-scan reveal product-card-2"
+              data-platform="ios"
               data-glow
             >
               <div class="product-card-content">
@@ -826,6 +836,7 @@
             </article>
             <article
               class="product-card product-calc reveal product-card-3"
+              data-platform="ios"
               data-glow
             >
               <div class="product-card-content">
@@ -896,6 +907,7 @@
             </article>
             <article
               class="product-card product-pdf reveal product-card-4"
+              data-platform="web"
               data-glow
             >
               <div class="product-card-content">
@@ -946,6 +958,7 @@
             </article>
             <article
               class="product-card product-screenmint reveal product-card-5"
+              data-platform="ios"
               data-glow
             >
               <div class="product-card-content">
@@ -1385,5 +1398,6 @@
       Discuss your project <span aria-hidden="true">↗</span>
     </a>
     <script src="./assets/nav-highlight.js"></script>
+    <script src="./assets/product-discovery.js"></script>
   </body>
 </html>

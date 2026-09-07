@@ -1094,6 +1094,20 @@
 }
 
 /* Product galleries, FAQ and mobile conversion shortcut */
+.reveal { opacity: 1; transform: none; animation: none; }
+.reveal.is-visible { animation: 0.75s cubic-bezier(.2,.7,.2,1) both revealSafely; animation-delay: var(--reveal-delay,20ms); }
+@keyframes revealSafely { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .reveal.is-visible { animation: none; } }
+.product-grid[data-filter="ios"] .product-screenmint { grid-column: auto; width: 100%; }
+.product-filter-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin: -24px 0 28px; }
+.product-filter-bar[hidden], .product-card[hidden] { display: none !important; }
+.product-filter-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+.product-filter-buttons button { min-height: 46px; padding: 10px 18px; border: 1px solid #071a2d55; border-radius: 999px; background: #fff; color: var(--navy); font-size: 14px; font-weight: 750; cursor: pointer; }
+.product-filter-buttons button[aria-pressed="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+.product-filter-buttons button:hover { border-color: #12634d; box-shadow: 0 0 0 1px #12634d; }
+.product-filter-buttons button:focus-visible { outline: 3px solid #127b92; outline-offset: 3px; }
+.product-filter-bar p { margin: 0; color: #53636e; font-size: 14px; }
+
 .product-links .gallery-trigger {
   display: inline-flex;
   align-items: center;
