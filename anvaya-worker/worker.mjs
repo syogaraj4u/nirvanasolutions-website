@@ -11,6 +11,11 @@ const securityHeaders = {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    const visitor = request.headers.get("CF-Visitor");
+    if (visitor?.includes('"scheme":"http"')) {
+      url.protocol = "https:";
+      return Response.redirect(url, 308);
+    }
 
     if (url.pathname === "/health") {
       return Response.json(
