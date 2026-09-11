@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#20231f">
+  <title>Anvaya — iOS product demonstration</title>
+  <meta name="description" content="Anvaya is a premium professional-matrimony iOS product demonstration by Nirvana Solutions.">
+  <link rel="icon" type="image/png" href="/icon.png">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #20231f;
+      --ivory: #f7f2e8;
+      --paper: #fffdf8;
+      --gold: #b08c52;
+      --gold-soft: #ead9b8;
+      --muted: #686a63;
+      --line: rgba(176, 140, 82, .26);
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--ink); }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 82% 14%, rgba(176, 140, 82, .18), transparent 28rem),
+        var(--ivory);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    main {
+      width: min(1120px, calc(100% - 40px));
+      min-height: 100vh;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.18fr) minmax(300px, .82fr);
+      align-items: center;
+      gap: clamp(44px, 8vw, 112px);
+      padding: 72px 0;
+    }
+    .eyebrow, .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .78rem;
+      font-weight: 750;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .eyebrow { color: #856735; }
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: var(--gold);
+    }
+    h1 {
+      max-width: 760px;
+      margin: 26px 0 22px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      font-weight: 600;
+      letter-spacing: -.055em;
+      line-height: .92;
+    }
+    .lead {
+      max-width: 650px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1.08rem, 2vw, 1.34rem);
+    }
+    .statement {
+      margin-top: 42px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .98rem;
+    }
+    .statement strong { color: var(--ink); }
+    .brand-panel {
+      position: relative;
+      overflow: hidden;
+      min-height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: clamp(28px, 5vw, 50px);
+      color: var(--ivory);
+      background: var(--ink);
+      border: 1px solid rgba(234, 217, 184, .16);
+      border-radius: 34px;
+      box-shadow: 0 34px 80px rgba(32, 35, 31, .18);
+    }
+    .brand-panel::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      bottom: -150px;
+      width: 370px;
+      height: 370px;
+      border: 1px solid rgba(234, 217, 184, .18);
+      border-radius: 50%;
+      box-shadow: 0 0 0 54px rgba(234, 217, 184, .035), 0 0 0 108px rgba(234, 217, 184, .025);
+    }
+    .icon {
+      position: relative;
+      z-index: 1;
+      width: 132px;
+      height: 132px;
+      border-radius: 30px;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, .28);
+    }
+    .panel-copy { position: relative; z-index: 1; }
+    .status {
+      padding: 8px 12px;
+      color: var(--gold-soft);
+      border: 1px solid rgba(234, 217, 184, .28);
+      border-radius: 999px;
+    }
+    .panel-copy h2 {
+      margin: 22px 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 500;
+      line-height: 1.06;
+    }
+    .panel-copy p { margin: 0; color: rgba(247, 242, 232, .7); }
+    footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 16px 20px;
+      color: rgba(247, 242, 232, .64);
+      background: var(--ink);
+      font-size: .82rem;
+      text-align: center;
+    }
+    footer a { color: var(--gold-soft); text-underline-offset: 3px; }
+    @media (max-width: 820px) {
+      main { grid-template-columns: 1fr; min-height: auto; padding: 54px 0 94px; }
+      .brand-panel { min-height: 420px; }
+      h1 { font-size: clamp(3.4rem, 17vw, 6rem); }
+    }
+    @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+  <main>
+    <section aria-labelledby="title">
+      <div class="eyebrow">Nirvana Solutions presents</div>
+      <h1 id="title">Anvaya</h1>
+      <p class="lead">A considered iOS experience for serious introductions between verified professionals.</p>
+      <p class="statement"><strong>Current stage:</strong> a private, fictional product demonstration for client and development review. Live accounts, document review, messaging and matchmaking services are not enabled.</p>
+    </section>
+    <aside class="brand-panel" aria-label="Anvaya demonstration status">
+      <img class="icon" src="/icon.png" width="132" height="132" alt="Anvaya app icon">
+      <div class="panel-copy">
+        <div class="status">iOS demo ready</div>
+        <h2>Premium by design.<br>Careful by default.</h2>
+        <p>Guided onboarding, claim review, privacy controls, thoughtful discovery and mutual-interest connections.</p>
+      </div>
+    </aside>
+  </main>
+  <footer>A product concept by <a href="https://nirvanasolutions.in/">Nirvana Solutions</a></footer>
+</body>
+</html>
