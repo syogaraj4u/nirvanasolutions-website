@@ -119,6 +119,17 @@
             "inLanguage": "en-IN"
           },
           {
+            "@type": "SoftwareApplication",
+            "@id": "https://nirvanasolutions.in/sms-forwarder/#app",
+            "name": "SMS Forwarder",
+            "url": "https://nirvanasolutions.in/sms-forwarder/",
+            "description": "An Android utility that forwards new incoming SMS to multiple user-controlled destinations.",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Android",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "publisher": { "@id": "https://nirvanasolutions.in/#organization" }
+          },
+          {
             "@type": "FAQPage",
             "@id": "https://nirvanasolutions.in/#faq",
             "mainEntity": [
@@ -688,9 +699,10 @@
             <div class="product-filter-buttons" role="group" aria-label="Browse products by platform">
               <button type="button" data-product-filter="all" aria-pressed="true" aria-controls="product-list">All products</button>
               <button type="button" data-product-filter="ios" aria-pressed="false" aria-controls="product-list">Apple apps</button>
+              <button type="button" data-product-filter="android" aria-pressed="false" aria-controls="product-list">Android apps</button>
               <button type="button" data-product-filter="web" aria-pressed="false" aria-controls="product-list">Web tools</button>
             </div>
-            <p role="status" aria-live="polite" aria-atomic="true">5 products shown</p>
+            <p role="status" aria-live="polite" aria-atomic="true">6 products shown</p>
           </div>
           <div class="product-grid" id="product-list">
             <article
@@ -1004,6 +1016,44 @@
                     >Privacy</a
                   ><a class="product-btn" href="./screenmint/support/"
                     >Support</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="product-card product-forwarder reveal product-card-6"
+              data-platform="android"
+              data-glow
+            >
+              <div class="product-card-content">
+                <div class="product-top"><span>F</span></div>
+                <div class="product-status-row">
+                  <span class="product-state">● Android alpha · Play review planned</span>
+                </div>
+                <a
+                  class="product-screen-link"
+                  href="./sms-forwarder/"
+                  aria-label="Learn more about SMS Forwarder"
+                  ><div class="product-screen">
+                    <img
+                      class="real-product-shot"
+                      src="./assets/product-screens/sms-forwarder.webp"
+                      alt="SMS Forwarder Android overview and forwarding health screen"
+                      loading="lazy"
+                      width="636"
+                      height="1386"
+                    /></div
+                ></a>
+                <p class="product-kicker">Your messages, delivered securely.</p>
+                <h3>SMS Forwarder</h3>
+                <p>
+                  Forward new incoming SMS to multiple email or HTTPS destinations
+                  with encrypted credentials, routing rules and guided delivery health.
+                </p>
+                <div class="product-links">
+                  <a class="product-btn" href="./sms-forwarder/">Learn more</a
+                  ><a class="product-btn" href="./sms-forwarder/privacy/"
+                    >Privacy</a
                   >
                 </div>
               </div>

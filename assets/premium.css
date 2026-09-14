@@ -685,13 +685,54 @@
 }
 
 .product-screenmint {
-  grid-column: 1 / -1;
-  justify-self: center;
-  width: calc(50% - 10px);
+  grid-column: auto;
+  width: 100%;
 }
 
 .product-screenmint .product-screen {
   background: #050505;
+}
+
+.product-forwarder .product-screen {
+  background:
+    radial-gradient(circle at 78% 12%, #b58cff66, transparent 34%),
+    linear-gradient(145deg, #2e1d74, #6e52d9 58%, #a87feb);
+}
+
+.product-detail-visual.product-forwarder {
+  background:
+    radial-gradient(circle at 78% 12%, #b58cff66, transparent 34%),
+    linear-gradient(145deg, #2e1d74, #6e52d9 58%, #a87feb);
+}
+
+.product-detail-hero .sms-forwarder-availability {
+  max-width: 720px;
+  margin-top: 24px;
+  padding: 16px 18px;
+  color: #d7d8f7;
+  background: #ffffff0f;
+  border: 1px solid #ffffff24;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.sms-forwarder-boundary {
+  margin-top: 28px;
+  padding: 24px 26px;
+  background: #f0ecff;
+  border: 1px solid #6e52d92b;
+  border-radius: 16px;
+}
+
+.sms-forwarder-boundary h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.sms-forwarder-boundary p {
+  margin: 0;
+  font-size: 15px;
 }
 
 .product-screen > .real-product-shot {
@@ -990,6 +1031,9 @@
   .product-screenmint {
     width: 100%;
   }
+  .product-grid[data-filter="android"] .product-forwarder {
+    width: 100%;
+  }
   .enquiry-grid {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -1099,6 +1143,8 @@
 @keyframes revealSafely { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .reveal.is-visible { animation: none; } }
 .product-grid[data-filter="ios"] .product-screenmint { grid-column: auto; width: 100%; }
+.product-grid[data-filter="android"] .product-forwarder { grid-column: 1 / -1; justify-self: center; width: calc(50% - 10px); }
+.product-card-6 { --reveal-delay: 120ms; }
 .product-filter-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin: -24px 0 28px; }
 .product-filter-bar[hidden], .product-card[hidden] { display: none !important; }
 .product-filter-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
